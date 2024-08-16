@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('events', function (Blueprint $table) {
             $table->id();
             $table->string('case_number');
-            $table->date('date');
+            $table->dateTime('date');
             $table->string('pais');
             $table->string('CC');
             $table->string('part_number');
@@ -26,7 +26,7 @@ return new class extends Migration
             $table->string('priority');
             $table->string('OC');
             $table->string('ETA');
-            $table->foreignId('client_id')->constrained('client')->cascadeOnUpdate()->cascadeOnDelete();
+            $table->foreignId('client_id')->constrained('clients')->cascadeOnUpdate()->cascadeOnDelete();
             $table->timestamps();
         });
     }
