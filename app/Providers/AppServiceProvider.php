@@ -25,7 +25,7 @@ class AppServiceProvider extends ServiceProvider
         Schema::defaultStringLength(191);
         LanguageSwitch::configureUsing(function (LanguageSwitch $switch) {
             $switch
-                ->locales(['es','en']); // also accepts a closure
+                ->locales(['es', 'en']); // also accepts a closure
         });
 
         FilamentColor::register([
