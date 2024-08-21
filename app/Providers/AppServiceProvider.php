@@ -23,11 +23,6 @@ class AppServiceProvider extends ServiceProvider
     public function boot(): void
     {
         Schema::defaultStringLength(191);
-        LanguageSwitch::configureUsing(function (LanguageSwitch $switch) {
-            $switch
-                ->locales(['es', 'en']); // also accepts a closure
-        });
-
         FilamentColor::register([
             'danger' => Color::Red,
             'gray' => Color::Gray,
