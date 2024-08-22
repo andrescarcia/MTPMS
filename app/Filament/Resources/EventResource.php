@@ -220,8 +220,8 @@ class EventResource extends Resource
                         'Puerto Rico' => 'Puerto Rico',
                     ])
                     ->label('País'),
-                        // obtener la lista de clientes y mostrar en el filtro
-                    Tables\Filters\SelectFilter::make('client.name')
+                // obtener la lista de clientes y mostrar en el filtro
+                Tables\Filters\SelectFilter::make('client.name')
                     ->relationship('client', 'name')
                     ->label('Cliente'),
 
@@ -229,12 +229,12 @@ class EventResource extends Resource
             ->actions([
                 Tables\Actions\EditAction::make(),
                 Tables\Actions\DeleteAction::make(),
-                Tables\Actions\Action::make('pdf') 
+                Tables\Actions\Action::make('pdf')
                     ->label('PDF')
                     ->color('success')
                     ->icon('heroicon-o-arrow-down-tray')
-                    ->url(fn (Event $event) => route('pdf', $event))
-                    ->openUrlInNewTab(), 
+                    ->url(fn(Event $event) => route('pdf', $event))
+                    ->openUrlInNewTab(),
             ])
             ->headerActions([
                 // ExportAction::make()->exporter(EventExporter::class)
