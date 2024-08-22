@@ -14,7 +14,8 @@
 
 
 </head>
-
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="//unpkg.com/alpinejs" defer></script>
 <body class="flex flex-col min-h-screen font-sans antialiased dark:bg-black dark:text-white/50">
     <section class="relative w-full px-8 text-gray-700 bg-white body-font" data-tails-scripts="//unpkg.com/alpinejs"
         {!! $attributes ?? '' !!}>
@@ -105,7 +106,6 @@
     </section>
 
 </body>
-<script src="https://cdn.tailwindcss.com"></script>
-<script src="//unpkg.com/alpinejs" defer></script>
+
 
 </html>
